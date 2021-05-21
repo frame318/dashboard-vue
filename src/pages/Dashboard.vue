@@ -8,7 +8,7 @@
             <div class="row">
               <div class="col-sm-6" :class="isRTL ? 'text-right' : 'text-left'">
                 <!-- <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5> -->
-                <h4 class="card-title text-dark"> จำนวนการทิ้งขยะ </h4>
+                <h4 class="card-title text-dark"> จำนวนการทิ้งขยะ / ครั้ง </h4>
               </div>
               <div class="col-sm-6">
                 <div class="btn-group btn-group-toggle"
