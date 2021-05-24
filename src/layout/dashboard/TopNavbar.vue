@@ -1,13 +1,15 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-absolute " 
+  <nav class="navbar navbar-expand-lg navbar-absolute "  
        :class="{'bg-white': showMenu, 'navbar-transparent': !showMenu} ">
-    <div class="container-fluid">
-      <div class="navbar-wrapper">
-        <div class="navbar-toggle d-inline" :class="{toggled: $sidebar.showSidebar}">
+    <div class="container-fluid" >
+      <div class="navbar-wrapper ">
+        <div class="navbar-toggle d-inline " :class="{toggled: $sidebar.showSidebar}" >
           <button type="button"
-                  class="navbar-toggler"
+                  class="navbar-toggler "
                   aria-label="Navbar toggle button"
-                  @click="toggleSidebar">
+                  @click="toggleSidebar"
+                  style="background-color: #9932CC;"
+                  >
             <span class="navbar-toggler-bar bar1"></span>
             <span class="navbar-toggler-bar bar2"></span>
             <span class="navbar-toggler-bar bar3"></span>
@@ -29,14 +31,13 @@
       <collapse-transition>
         <div class="collapse navbar-collapse show" v-show="showMenu">
           <ul class="navbar-nav" :class="$rtl.isRTL ? 'mr-auto' : 'ml-auto'">
-            <div class="search-bar input-group" @click="searchModalVisible = true">
-              <!-- <input type="text" class="form-control" placeholder="Search...">
-              <div class="input-group-addon"><i class="tim-icons icon-zoom-split"></i></div> -->
+            <!-- <div class="search-bar input-group bg-dark" @click="searchModalVisible = true">
+              <input type="text" class="form-control" placeholder="Search...">
+              <div class="input-group-addon"><i class="tim-icons icon-zoom-split"></i></div>
               <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal">
                 <i class="tim-icons icon-zoom-split"></i>
               </button>
-              <!-- You can choose types of search input -->
-            </div>
+            </div> -->
             <modal :show.sync="searchModalVisible"
                    class="modal-search "
                    id="searchModal"
@@ -101,6 +102,9 @@
     </div>
   </nav>
 </template>
+<style scoped>
+  
+</style>
 <script>
   import { CollapseTransition } from 'vue2-transitions';
   import Modal from '@/components/Modal';
